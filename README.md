@@ -277,6 +277,13 @@ $ ./6_auth.sh
 $ ./7_seed-exchange.sh
 $ ./8_derive-aes-key.sh
 $ ./9_secured-download.sh
+
+# Verify the decrypted text from Step 9
+$ grep "You have successfully decrypted this message." decrypted.txt
+
+# Verify the decrypted hex from Step 9
+$ printf "\xDE\xAD\xBE\xEF" > expected.hex
+$ cmp decrypted.hex expected.hex
 ```
 
 You can find more information about each individual script in the following table:
